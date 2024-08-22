@@ -10,7 +10,7 @@ function sendToWhatsapp(event) {
   let bookingDate = encodeURIComponent(document.querySelector('input[name="booking_date"]').value);
   let message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
 
-  var url = "https://wa.me/" + number + "?text="
+  var url = "whatsapp://send?phone=" + number + "&text="
     + "Nome: " + fullName + "%0a"
     + "Telefone: " + phone + "%0a"
     + "Email: " + email + "%0a"
@@ -24,3 +24,6 @@ function sendToWhatsapp(event) {
 
 // Adiciona o ouvinte de evento ao formulário
 document.querySelector('.footer-form').addEventListener('submit', sendToWhatsapp);
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.footer-form').addEventListener('submit', sendToWhatsapp);
+});
