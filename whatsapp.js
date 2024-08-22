@@ -1,14 +1,14 @@
 function sendToWhatsapp(event) {
-  event.preventDefault(); // Prevent the form from submitting normally
+  event.preventDefault(); // Impede que o formulário seja enviado normalmente
 
   let number = "+244931516341";
-  let fullName = document.querySelector('input[name="full_name"]').value;
-  let phone = document.querySelector('input[name="email_address"][type="number"]').value;
-  let email = document.querySelector('input[name="email_address"][type="email"]').value;
-  let address = document.querySelector('input[name="email_address"][type="text"]').value;
-  let totalPerson = document.querySelector('select[name="total_person"]').value;
-  let bookingDate = document.querySelector('input[name="booking_date"]').value;
-  let message = document.querySelector('textarea[name="message"]').value;
+  let fullName = encodeURIComponent(document.querySelector('input[name="full_name"]').value);
+  let phone = encodeURIComponent(document.querySelector('input[name="email_address"][type="number"]').value);
+  let email = encodeURIComponent(document.querySelector('input[name="email_address"][type="email"]').value);
+  let address = encodeURIComponent(document.querySelector('input[name="email_address"][type="text"]').value);
+  let totalPerson = encodeURIComponent(document.querySelector('select[name="total_person"]').value);
+  let bookingDate = encodeURIComponent(document.querySelector('input[name="booking_date"]').value);
+  let message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
 
   var url = "https://wa.me/" + number + "?text="
     + "Nome: " + fullName + "%0a"
@@ -22,8 +22,5 @@ function sendToWhatsapp(event) {
   window.open(url, '_blank').focus();
 }
 
-// Add event listener to the form
+// Adiciona o ouvinte de evento ao formulário
 document.querySelector('.footer-form').addEventListener('submit', sendToWhatsapp);
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.footer-form').addEventListener('submit', sendToWhatsapp);
-});
