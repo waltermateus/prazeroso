@@ -10,7 +10,7 @@ function sendToWhatsapp(event) {
   let bookingDate = document.querySelector('input[name="booking_date"]').value;
   let message = document.querySelector('textarea[name="message"]').value;
 
-  var url = "whatsapp://send?phone=" + number + "&text="
+  var url = "https://wa.me/" + 244931516341 + "?text="
     + "Nome: " + fullName + "%0a"
     + "Telefone: " + phone + "%0a"
     + "Email: " + email + "%0a"
