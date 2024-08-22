@@ -1,7 +1,7 @@
 function sendToWhatsapp(event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
-  let number = "+244931516341";
+  let number = "+244932516341";
   let fullName = document.querySelector('input[name="full_name"]').value;
   let phone = document.querySelector('input[name="email_address"][type="number"]').value;
   let email = document.querySelector('input[name="email_address"][type="email"]').value;
@@ -10,7 +10,7 @@ function sendToWhatsapp(event) {
   let bookingDate = document.querySelector('input[name="booking_date"]').value;
   let message = document.querySelector('textarea[name="message"]').value;
 
-  var url = "https://wa.me/" + number + "?text="
+  var url = "https://wa.me/" + 244932516341 + "?text="
     + "Nome: " + fullName + "%0a"
     + "Telefone: " + phone + "%0a"
     + "Email: " + email + "%0a"
