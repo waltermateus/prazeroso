@@ -819,47 +819,43 @@
           </li>
 
         </ul>
+        
+	<form action="" class="footer-form">
 
-        <form action="" class="footer-form">
+  		<p class="footer-list-title">Reserve uma mesa</p>
 
-          <p class="footer-list-title">Reserve uma mesa</p>
+     <div class="input-wrapper">
 
-          <div class="input-wrapper">
+    	<input type="text" name="full_name" required placeholder="Nome" aria-label="Your Name" class="input-field">
+    
+    	<input type="tel" name="phone_number" required placeholder="Telefone" aria-label="Telefone" class="input-field"
+     	 pattern="^[9][0-9]{8}$" title="O número de telefone deve ser composto por 9 dígitos e começar com 9 (ex: 923562895)">
 
-            <input type="text" name="full_name" required placeholder="Nome" aria-label="Your Name"
-              class="input-field">
-              
-              <input type="number" name="email_address" required placeholder="Telefone" aria-label="Telefone"
-              class="input-field">
+    	<input type="email" name="email_address" required placeholder="Email" aria-label="Email" class="input-field">
+    
+   	 <input type="text" name="address" required placeholder="Morada" aria-label="Morada" class="input-field">
 
-            <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
-              class="input-field">
-              
-              <input type="text" name="email_address" required placeholder="Morada" aria-label="Morada"
-              class="input-field">
+     </div>
 
-	    
-          </div>
+     <div class="input-wrapper">
 
-          <div class="input-wrapper">
+    		<select name="total_person" aria-label="Total person" class="input-field">
+      		<option value="1">1 Pessoa</option>
+    		<option value="2">2 Pessoas</option>
+    		<option value="3">3 Pessoas</option>
+      		<option value="4">4 Pessoas</option>
+      		<option value="5">5 Pessoas</option>
+    	</select>
 
-            <select name="total_person" aria-label="Total person" class="input-field">
-              <option value="person">1 Pessoa</option>
-              <option value="2 person">2 Pessoas</option>
-              <option value="3 person">3 Pessoas</option>
-              <option value="4 person">4 Pessoas</option>
-              <option value="5 person">5 Pessoas</option>
-            </select>
+    	<input type="date" name="booking_date" aria-label="Reservation date" class="input-field">
 
-            <input type="date" name="booking_date" aria-label="Reservation date" class="input-field">
+    </div>
 
-          </div>
+  	<textarea name="message" required placeholder="Mensagem" aria-label="Mensagem" class="input-field" id="Contactos"></textarea>
 
-          <textarea name="message" required placeholder="Mensagem" aria-label="Mensagem" class="input-field" id="Contactos"></textarea>
+  	<button type="submit" class="btn">Reserve uma mesa</button>
 
-          <button type="submit" class="btn">Reserve uma mesa</button>
-
-        </form>
+    </form>
 
       </div>
     </div>
